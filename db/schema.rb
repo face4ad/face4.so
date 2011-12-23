@@ -11,11 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111118064120) do
+ActiveRecord::Schema.define(:version => 20111222071411) do
+
+  create_table "reg_questions", :force => true do |t|
+    t.text     "body"
+    t.string   "answer"
+    t.string   "kind"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "correct_counter", :default => 0
+    t.integer  "wrong_counter",   :default => 0
+  end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                                 :default => "", :null => false
-    t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
+    t.string   "email",                                 :default => "",    :null => false
+    t.string   "encrypted_password",     :limit => 128, :default => "",    :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -29,8 +39,16 @@ ActiveRecord::Schema.define(:version => 20111118064120) do
     t.string   "name"
     t.integer  "sina_id"
     t.string   "sina_name"
+    t.string   "introduction"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.boolean  "active",                                :default => false
+    t.text     "access_token"
+    t.text     "access_token_secret"
   end
 
+  add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["name"], :name => "index_users_on_name"
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true

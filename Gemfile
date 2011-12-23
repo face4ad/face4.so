@@ -18,6 +18,7 @@ gem 'whenever'
 gem 'sunspot_rails', '~> 1.2.1'
 gem 'oauth'
 gem 'oauth_china'
+gem 'cancan'
 
 
 

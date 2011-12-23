@@ -35,7 +35,6 @@ class SyncsController < ApplicationController
       session[:sina_id] = sina_id
       session[:sina_name] = sina_name
       
-
       #check user existing or not
       logger.debug("find the user by sina id #{sina_id}")
       user = User.find_by_sina_id(sina_id)
@@ -46,16 +45,13 @@ class SyncsController < ApplicationController
         #user.confirm! if not user.confirmed?
         sign_in(:user, user)
 
-        #check account is activated or not
-        #@TODO if activated, redirect to dashboard
-        if not user.confirmed?
-	  render :text => "You need to be proved as programmer"
-        else
-        #@TODO if not activated, redirect to question testing
-        #redirect_to #some where
-          render :text => "you already have account, now we're redirecting you to dashboard"
-        end
-        return
+        #Save the access token and secret token, in future it can use to call sina api
+        user.access_token = results[:access_token]
+	user.access_token_secret = results[:access_token_secret]
+	user.save
+
+        #simply redirect to dashboard, will not check ative or not here
+        redirect_to dashboard_path and return
       else
         logger.debug("no such sina user, ready to prepare the sign up form")
         #if user directly go to this path without sina auth, it would be failed.	

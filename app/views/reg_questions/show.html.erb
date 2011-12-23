@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Question:</b>
+  <%= @reg_question.body %>
+</p>
+
+
+<p>
+  <b>Domain:</b>
+  <%= @reg_question.kind %>
+</p>
+
+<p>
+<b>
+<%= form_for @reg_question, :url => answer_reg_question_path do |f| %>
+  <%= f.label "Your answer" %>:
+  <%= f.text_field :answer %>
+  <%= f.hidden_field :id %>
+  <%= f.submit "Submit my answer" %>
+<% end %>
+</b>
+
+</p>

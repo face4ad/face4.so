@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+RegQuestion.create(:body => "How to spell Java?", :answer => "Java", :kind => "java")
+RegQuestion.create(:body => "How to spell C++?", :answer => "C++", :kind => "c++")
+RegQuestion.create(:body => "How to spell Python?", :answer => "Python", :kind => "python")
+
+1.upto(100) do |counter|
+  RegQuestion.create(:body => "What is this number #{counter}?", :answer => counter, :kind => "dummy")
+end
