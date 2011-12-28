@@ -1,5 +1,6 @@
 Face4::Application.routes.draw do
 
+
   devise_for :users, :controllers => { :registrations => "registrations" }
 
   #resources :users
@@ -21,6 +22,17 @@ Face4::Application.routes.draw do
 
     #User dashboard
     match "/user/dashboard" => "users#dashboard", :as => :dashboard
+
+    #Tagged question
+    match "/questions/tag" => "questions#tagged_with", :as => :tagged_questions
+  
+    #List all tags
+    match "/questions/tags" => "questions#tags_list", :as => :tags_list
+ 
+    resources :questions
+
+    #User create question
+    #match "/user/question/new" => "users#new_question", :as => :new_question
 
     #resources :reg_questions
 

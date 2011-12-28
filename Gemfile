@@ -1,4 +1,5 @@
-source 'http://rubygems.org'
+#source 'http://rubygems.org'
+source 'http://ruby.taobao.org'
 
 gem 'rails', '3.1.0'
 
@@ -19,8 +20,8 @@ gem 'sunspot_rails', '~> 1.2.1'
 gem 'oauth'
 gem 'oauth_china'
 gem 'cancan'
-
-
+gem 'ruby_parser'
+gem 'acts-as-taggable-on', '~> 2.2.0'
 
 # Gems used only for assets and not required
 # in production environments by default.

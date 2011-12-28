@@ -1,0 +1,25 @@
+%h1 Listing questions
+%table
+  %tr
+    %th Title
+    %th Body
+    %th User
+    %th Tag
+    %th
+    %th
+    %th
+  - @questions.each do |question|
+    %tr
+      %td= question.title
+      %td= question.body
+      %td= question.user.name
+      %td
+        - question.tags.each do |tag|
+          = link_to tag.name, tagged_questions_path(:name => tag.name)
+      %td= link_to 'Show', question
+      %td= link_to 'Edit', edit_question_path(question)
+      %td= link_to 'Destroy', question, confirm: 'Are you sure?', method: :delete
+%br/
+= render "shared/footer"
+= will_paginate @questions
+
