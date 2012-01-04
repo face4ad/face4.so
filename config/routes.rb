@@ -1,6 +1,8 @@
 Face4::Application.routes.draw do
 
 
+  resources :answers
+
   devise_for :users, :controllers => { :registrations => "registrations" }
 
   #resources :users

@@ -10,7 +10,9 @@
     %th
   - @questions.each do |question|
     %tr
-      %td= question.title
+      %td
+        = question.title
+        = "(#{question.answers.size})"
       %td= question.body
       %td= question.user.name
       %td

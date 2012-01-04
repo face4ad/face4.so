@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111228030718) do
+ActiveRecord::Schema.define(:version => 20120104094259) do
+
+  create_table "answers", :force => true do |t|
+    t.text     "body"
+    t.integer  "user_id"
+    t.integer  "question_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "questions", :force => true do |t|
     t.text     "title"
@@ -19,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20111228030718) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "answers_count", :default => 0
   end
 
   create_table "reg_questions", :force => true do |t|
@@ -71,6 +80,8 @@ ActiveRecord::Schema.define(:version => 20111228030718) do
     t.boolean  "active",                                :default => false
     t.text     "access_token"
     t.text     "access_token_secret"
+    t.integer  "questions_count",                       :default => 0
+    t.integer  "answers_count",                         :default => 0
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
