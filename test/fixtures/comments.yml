@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  body: MyText
+  line: MyString
+  answer_id: 1
+  user_id: 
+  question_id: 
+
+two:
+  body: MyText
+  line: MyString
+  answer_id: 1
+  user_id: 
+  question_id: 
