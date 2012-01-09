@@ -1,0 +1,119 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body {
+	margin:0;
+	padding:0;
+  font-family:verdana
+}
+
+#login{
+  width:100%;
+  min-height:760px;
+  background:url(background.png) repeat-y center;
+}
+
+#login_panel{
+  background:url(bg_login.png) no-repeat center;
+  width:726px;
+  height:417px;
+  margin: auto;
+  margin-top:128px;
+}
+
+#login_form{
+  width:350px;
+  height:140;
+  margin:0 auto;
+  position:relative;
+  top:124px;
+  label{
+    color:#329AFE;
+    font-size:16pt;
+    font-family: "Microsoft YaHei" !important;
+  }
+  .row{
+    margin-bottom:12px;
+    .title{
+      width:90px;
+      float:left;
+    }
+    .txt{
+      font-size:13px;
+      font-weight:bold;
+      color:#676767
+    }
+  }
+  .text{
+    background:url(bg_input.png) no-repeat center;
+    border:none;
+    width:219px;
+    height:30px;
+    padding-left:6px;
+    color:#676767;
+    font-size:11pt;
+  }
+}
+
+#tip{
+  background:url(clip.png) no-repeat center;
+  width:486px;
+  height:142px;
+  margin:0 auto;
+  position:relative;
+  padding-top:12px;
+  top:-92px;
+  text-align:center;
+  span{
+    font-size:22pt;
+    display:block;
+    height:18px;
+    font-family: "Microsoft YaHei" !important;
+    color:#5F5D57;
+    margin-top:24px;
+  }
+  em{
+    color:#CD0706;
+    font-style:normal;
+    font-family:verdana;
+  }
+}
+
+.sign_in{
+  background:url(login.png) no-repeat center;
+  width:61px;
+  height:34px;
+  border:none;
+  cursor:pointer;
+  float:left;
+  margin-left:45px;
+}
+
+
+.sign_up{
+  background:url(regit.png) no-repeat center;
+  width:139px;
+  height:34px;
+  border:none;
+  cursor:pointer;
+  float:left;
+  margin-left:35px;
+}
+
+#footer{
+  width:500px;
+  height:30px;
+  margin:0 auto;
+  position:relative;
+  top:-80px;
+  ul li{
+      color:#BEBEBE;
+      display:inline;
+      font-family: "Microsoft YaHei" !important;
+  }
+  img{
+      vertical-align:baseline;
+  }
+}
