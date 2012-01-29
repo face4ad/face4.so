@@ -1,0 +1,41 @@
+= stylesheet_link_tag "questions"
+
+#bg
+  .container_12
+    = render "shared/title"
+  .container_12#main_top
+  .container_12#main_middle
+    .grid_2
+      = render "shared/left_nav"
+    .grid_7
+      = render "shared/search"
+      .question_list
+        -@questions.each do |question|
+          %dl
+            %dt
+              %a
+                =image_tag "date.png"
+            %dd
+              .title
+                %span.name #{question.user.name}:
+                =link_to question.title, question
+              .question_info
+                %span
+                  话题
+                  - question.tags.each do |tag|
+                    = link_to tag.name, tagged_questions_path(:name => tag.name), :title => tag.name
+                %span
+                  添加了
+                  %em #{question.answers.size}
+                  个答案
+                %span 关注
+
+      %br/
+      = will_paginate @questions
+    .grid_3
+      = render "shared/right_nav"
+  .container_12#main_bottom
+  .container_12
+    = render "shared/footer"
+
+
