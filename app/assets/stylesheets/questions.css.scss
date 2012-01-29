@@ -1,3 +1,96 @@
 // Place all the styles related to the questions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#bg{
+  background:url(bg.jpg) repeat-y center;
+  min-height:550px;
+  width:1003px;
+  margin:0 auto;
+}
+
+#main_top{
+  background:url(gb_top.jpg) no-repeat;
+  height:25px;
+}
+
+#main_middle{
+  background:url(gb_middle.jpg) repeat-y;
+}
+
+#main_bottom{
+  background:url(gb_bottom.jpg) no-repeat;
+  height:20px;
+}
+
+#search_div{
+  margin-top:0px;
+  width:100%;
+  padding: 0 auto;
+  background:url(search.png) no-repeat center;
+  height:50px;
+  #search{
+    border:none;
+    height:26px;
+    font-size:12pt;
+    font-family: "Microsoft YaHei" !important;
+    width:286px;
+    position:relative;
+    left:78px;
+    top:12px;
+    background:transparent;
+  }
+}
+
+.question_list{
+  margin-top:17px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei" !important;
+  dl{
+    display:block;
+    padding: 0 0 6px 0;
+    margin: 0 0 17px;
+    zoom: 1;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    min-height:60px
+  }
+  dt{
+    display: table-cell;
+    width: 60px;
+    padding: 3px 0 6px;
+    img{
+      width:50px;
+      height:50px;
+    }
+  }
+  dd{
+    display: table-cell;
+    vertical-align:top;
+    .title{
+      color: #3082FE;
+    }
+
+    .question_info{
+      margin-top:12px;
+      color:#828282;
+      span{
+        margin-right:4px;
+      }
+    }
+    span.name{
+      color:#828282;
+    }
+    em{
+      font-style:normal;
+      color:#FE1572
+    }
+    a{
+      text-decoration:none;
+      color:#4F96FE;
+      &:hover{
+        text-decoration:underline;
+      }
+    }
+  }
+}

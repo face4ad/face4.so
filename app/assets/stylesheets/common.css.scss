@@ -117,3 +117,222 @@ body {
       vertical-align:baseline;
   }
 }
+
+#alert{
+  height:30px;
+  width:100px;
+  background-color:#999;
+  position:absolute;
+  top:-20px;
+  left:30px;
+  p{
+    margin-left:94px;
+    border:1px red
+  }
+}
+
+.left_nav{
+  height:660px;
+  width:100%;
+}
+
+.right_nav{
+  height:auto;
+  width:100%;
+}
+
+#title{
+  width:100%;
+  height:58px;
+  vertical-align:middle;
+  img{
+    margin-top:4px;
+  }
+  .login_info{
+    padding-top:20px;
+    float:right
+  }
+  span{
+    color:#FFF
+  }
+  #user_name{
+    color:#F00;
+  }
+  #logout{
+    color:#FFF
+  }
+  a{
+    text-decoration:none;
+    &:hover{
+      text-decoration:underline;
+    }
+  }
+}
+
+#main_footer{
+  width:500px;
+  height:50px;
+  padding-top:18px;
+  margin:0 auto;
+  ul li{
+      color:#FFF;
+      display:inline;
+      font-family: "Microsoft YaHei" !important;
+  }
+  img{
+      vertical-align:baseline;
+  }
+}
+
+.user_info{
+  margin-top:10px;
+  margin-left:10px;
+  dl{
+    display:block;
+    padding: 0 0 6px 0;
+    margin-bottom:0;
+  }
+  dt{
+    display: table-cell;
+    width: 60px;
+    padding: 3px 0 6px;
+    img{
+      width:50px;
+      height:50px;
+    }
+  }
+  dd{
+    display: table-cell;
+    vertical-align:top;
+    .title{
+      color: #3082FE;
+    }
+  }
+}
+
+.user_atten{
+  padding:0;
+  margin-top:-24px;
+  color:#3082FE;
+  width:100%;
+  height:60px;
+  font: 12pt "Microsoft YaHei" bold;
+  ul{
+    list-style:none;
+    li{
+      float:left;
+      margin:4px 5px 0 0;
+      padding-right:5px;
+      border-right:1px solid #3082FE;
+      display:block;
+      b{
+        display:block;
+      }
+    }
+    li.e_none{
+      border-right:none;
+    }
+  }
+}
+
+ul.question_nav{
+    margin:10px 0 0 0;
+    list-style:none;
+    li{
+        display:table-cell;
+        vertical-align:bottom;
+        margin:0 12px 0 0;
+        padding-right:12px;
+        border-right:1px solid #C9C9C9;
+    }
+    .question_nav_home{
+        border-right:none;
+        padding-left:10px;
+    }
+    a{
+        vertical-align:bottom;
+        font: 12pt "Microsoft YaHei" bold;
+        color:#FE1572;
+        text-decoration:none;
+        &:hover{
+          text-decoration:underline;
+        }
+    }
+}
+
+#tags{
+  margin-top:38px;
+  vertical-align:bottom;
+  position:relative;
+  a{
+    position:absolute;
+    bottom:0;
+    left:38px;
+    text-decoration:none;
+    &:hover{
+      text-decoration:underline;
+    }
+  }
+}
+
+.clear_left{
+  clear:left;
+}
+
+.font_big_blue{
+  color:#3082FE;
+  font: 12pt "Microsoft YaHei" bold;
+}
+
+#hot_tags{
+  margin-top:38px;
+  width:196px;
+  border-bottom:1px solid #C9C9C9;
+  height:26px
+}
+
+#hot_tags_content{
+  margin-top:8px;
+  color:#4E4D48;
+  font-size:12pt;
+  span{
+    white-space:nowrap;
+  }
+}
+
+#hot_users{
+  margin-top:38px;
+  width:196px;
+  border-bottom:1px solid #C9C9C9;
+  height:26px
+}
+
+#hot_users_content{
+  margin-top:8px;
+  .hot_user{
+    img{
+      width:50px;
+      height:50px;
+    }
+    height:50px;
+    width:196px;
+    padding: 5px 0;
+    border-bottom:1px dashed #C9C9C9;
+    font: 11pt "Microsoft YaHei";
+    .user_name{
+      color:#4E4D48;
+    }
+    .ques_count{
+      display:block;
+      float:right;
+      color:#C9C9C9;
+      margin-top:14px;
+      vertical-align:middle;
+      em{
+       color:#FE1572;
+       font-style:normal;
+      }
+    }
+
+  }
+}
