@@ -1,0 +1,38 @@
+.right_nav
+  %ul.question_nav
+    %li
+      =image_tag "question.png"
+      =link_to "我要提问", new_question_path
+    %li.question_nav_home
+      =image_tag "home.png"
+      %a
+        首页
+
+  #tags.clear_left.font_big_blue
+    =image_tag "money.png"
+    =link_to "分类查找感兴趣的话题", tags_list_path, :class=> "font_big_blue"
+
+  #hot_tags
+    %span.font_big_blue 最热门话题标签
+  #hot_tags_content
+    %span JAVA
+    %span C++
+    %span Ruby
+    %span Javascript
+    %span 面试技巧
+
+  #hot_users
+    %span.font_big_blue 最活跃的程序员
+  #hot_users_content
+    -User.all.each do |user|
+      .hot_user
+        =image_tag "avatar.jpg"
+        %span.user_name
+          =user.name
+        %span.ques_count
+          %em 123
+          题
+
+
+
+

@@ -1,0 +1,9 @@
+#title
+  =image_tag "face4.png"
+  .login_info
+    %span
+      欢迎你
+    = link_to "牛大力", "javascript:void(0)", :id=>"user_name"
+    %span
+      |
+    = link_to "退出", destroy_user_session_path, :method => :delete, :id=>"logout"
