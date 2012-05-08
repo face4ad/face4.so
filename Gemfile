@@ -37,6 +37,8 @@ gem 'therubyracer'
 
 gem 'haml'
 
+gem 'tinymce-rails'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
