@@ -1,18 +1,18 @@
 #encoding: UTF-8
 module CategoriesHelper
 
-  def nested_categories(categories)
+  def nested_categories(categories, selected_cat)
     categories.map do |category, sub_categorys|
-      render_cat_link(category) + nested_categories(sub_categorys)
+      render_cat_link(category, selected_cat) + nested_categories(sub_categorys, selected_cat)
     end.join.html_safe
   end
 
-  def render_cat_link(category)
+  def render_cat_link(category, selected_cat)
     #content_tag :li, :escape => false do
     #  link_to "#{get_cat_space(category)}#{category.name}", user_cat_posts_path(:id => category.user.id, :cat_id => category.id)
     #end
     #TODO stuipd content tag not works here to escape the &nbsp;
-    "<li><a href='#{user_cat_posts_path(:id => category.user.id, :cat_id => category.id)}'>#{get_cat_space(category)}#{category.name} (#{category.posts.size})</a></li>"
+    "<li class ='#{category == selected_cat ? "active":"" }'><a href='#{user_cat_posts_path(:id => category.user.id, :cat_id => category.id)}'>#{get_cat_space(category)}#{category.name} <span class='grey_small'>(#{category.posts.size})<span></a></li>"
   end
 
 	def get_cat_space(category)
