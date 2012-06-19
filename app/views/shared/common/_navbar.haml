@@ -1,0 +1,29 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container-fluid
+      %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand{:href => "#"} Notes
+      - if not user_signed_in?
+        = link_to "登录", new_user_session_path, :class => "btn"
+      - else
+        .btn-group.pull-right
+          %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            %i.icon-user
+            = current_user.name if current_user
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              = link_to "新建分类", new_category_path
+            %li
+              = link_to "登出", destroy_user_session_path, :method => "DELETE"
+        .nav-collapse
+          %ul.nav
+            %li
+              = link_to "Home", user_posts_path(current_user)
+            %li
+              = link_to "New note", new_post_path
+      / /.nav-collapse
+

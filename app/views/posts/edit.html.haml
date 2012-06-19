@@ -1,0 +1,11 @@
+.container-fluid
+  .row-fluid
+    .span3
+      = render :partial => "shared/category_list"
+    .span9
+      .hero-unit
+        %h6 Editing post
+        = render 'form'
+        = link_to 'Show', @post
+        |
+        \#{link_to 'Back', posts_path}

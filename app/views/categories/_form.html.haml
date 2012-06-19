@@ -1,0 +1,6 @@
+= form_tag cmd_categories_path, :class => "form-inline"  do
+  = text_field_tag "cmd", "", :placeholder => "mkdir foldername", :class => "input-large"
+  = submit_tag "Run" , :class => "btn"
+  %p.help-block
+    %small exmaple: mkdir Linux , mkdir Linux/Vim
+  
