@@ -1,5 +1,6 @@
 #Note: Make sure server installed the g++ compiler
 load 'deploy'
+load 'deploy/assets'
 set :application, "face4.so"
 set :repository,  "https://github.com/face4ad/face4.so.git"
 
@@ -11,6 +12,7 @@ default_run_options[:pty] = true
 
 role :app, "118.144.94.147"
 role :db, "118.144.94.147", :primary => true
+role :web, "118.144.94.147"
 set :deploy_to, "/var/www/face4.so"
 
 require 'capistrano-unicorn'
