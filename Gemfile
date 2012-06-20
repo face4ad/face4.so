@@ -9,8 +9,8 @@ gem 'haml'
 gem 'thin'
 gem 'devise'
 gem 'jquery-rails'
-gem 'rvm-capistrano'
 gem 'capistrano-unicorn'
+gem 'rvm-capistrano'
 
 group :test, :development do
   gem 'debugger'
