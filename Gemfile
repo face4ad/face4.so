@@ -1,7 +1,6 @@
 source 'http://ruby.taobao.org'
 
 gem 'rails'
-gem 'sqlite3'
 gem "pygments.rb"
 gem 'redcarpet'
 gem 'ancestry'
@@ -10,9 +9,16 @@ gem 'haml'
 gem 'thin'
 gem 'devise'
 gem 'jquery-rails'
+gem 'rvm-capistrano'
+gem 'capistrano-unicorn'
 
-group :development do
+group :test, :development do
   gem 'debugger'
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'mysql'
 end
 
 

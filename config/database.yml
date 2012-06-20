@@ -19,7 +19,10 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
+  adapter: mysql 
+  encoding: utf8
+  database: face4
+  username: face4
+  password: face4
+  pool: 10
   timeout: 5000
