@@ -6,7 +6,7 @@
       %p#notice= notice
       .hero-unit
         %p
-          %h4= @post.title
+          %h3= @post.title
         %p
           = raw markdown @post.body
         = link_to 'Edit', edit_post_path(@post), :class => "btn"
