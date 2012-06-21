@@ -3,9 +3,7 @@
   %head
     %title Notes
     = stylesheet_link_tag "front"
-    = stylesheet_link_tag params[:controller]
     = javascript_include_tag "application"
-    = javascript_include_tag params[:controller] 
     = csrf_meta_tags
   %body
     = render :partial => "shared/common/navbar"
